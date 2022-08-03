@@ -1,11 +1,8 @@
-package com.wezaam.withdrawal.model;
+package com.wezaam.withdrawal.dto;
 
 import java.time.Instant;
 
-import javax.persistence.Entity;
-
-@Entity(name = "scheduled_withdrawals")
-public class WithdrawalScheduled extends Withdrawal {
+public class WithdrawalScheduledDTO extends WithdrawalDTO {
 
 	private Instant executeAt;
 

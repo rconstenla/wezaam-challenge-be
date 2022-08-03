@@ -1,13 +1,16 @@
 package com.wezaam.withdrawal.model;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.time.Instant;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import com.wezaam.withdrawal.enu.WithdrawalStatus;
 
 @Entity(name = "withdrawals")
 public class Withdrawal {
@@ -22,6 +25,8 @@ public class Withdrawal {
     private Long paymentMethodId;
     @Enumerated(EnumType.STRING)
     private WithdrawalStatus status;
+
+    private Boolean notyfy;
 
     public Long getId() {
         return id;
@@ -78,4 +83,12 @@ public class Withdrawal {
     public Long getTransactionId() {
         return transactionId;
     }
+
+	public Boolean getNotyfy() {
+		return notyfy;
+	}
+
+	public void setNotyfy(Boolean notyfy) {
+		this.notyfy = notyfy;
+	}
 }

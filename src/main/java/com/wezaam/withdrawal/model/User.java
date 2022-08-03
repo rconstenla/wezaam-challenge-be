@@ -1,12 +1,13 @@
 package com.wezaam.withdrawal.model;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import java.util.List;
-
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity(name = "users")
 public class User {

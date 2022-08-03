@@ -1,13 +1,13 @@
 package com.wezaam.withdrawal.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import static javax.persistence.GenerationType.IDENTITY;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity(name = "payment_methods")
 public class PaymentMethod {
